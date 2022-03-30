@@ -5,6 +5,7 @@ Developed by Gabriel Bravo Eguren.
 
 #include <iostream>
 #include <vector>
+#include <ctime>
 
 //number of characters with which the program will work
 const unsigned int CHARS_LENGTH = 87;
@@ -36,8 +37,9 @@ std::vector<int> getIndexList(std::string key)
     bool indexationComplete = false; //when all possible positions are assigned, exit
     int index, cont = 0;
     bool repeated;
+    unsigned int seed = std::hash<std::string>{}(key);
 
-    srand(std::hash<std::string>{}(key)); //the key is the seed by which the random numbers will be created
+    srand(seed); //the key is the seed by which the random numbers will be created
 
     while(!indexationComplete)
     {
@@ -63,6 +65,8 @@ std::vector<int> getIndexList(std::string key)
 
         if(cont == CHARS_LENGTH) indexationComplete = true;
     }
+    
+    srand(time(NULL));
 
     return indexList;
 }
