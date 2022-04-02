@@ -1,3 +1,0 @@
-/home/vestelion/C++/simple_encryption/build/CMakeFiles/rebuild_cache.dir
-/home/vestelion/C++/simple_encryption/build/CMakeFiles/edit_cache.dir
-/home/vestelion/C++/simple_encryption/build/CMakeFiles/simple_encryption.dir
